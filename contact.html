@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+
           <!-- Bootstrap required meta tags-->
   <meta charset="UTF8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,31 +47,92 @@
                     
                     <a href="index.html"><img src="Images/Image.JPEG" class="img-tag-profile grid-item-header img-circle" alt="Profile Picture" width="150 px" ></a>
         </header>
-    <form class="container-fluid">
+
+        <!-- <article id="coder3" class="col-md-4 ">
+            <h2>Volume</h2>
+          
+            <fieldset class="mt-2">
+              <label >Enter the height:</label>
+              <input v-model="height" id="height" type="text">
+            </fieldset>
+            <fieldset class="mt-2">
+              <label >Enter weight:</label>
+              <input v-model="weight" id="weight" type="text">
+            </fieldset>
+            <fieldset class="mt-2">
+              <label >Enter length:</label>
+              <input v-model="length" id="length" type="text">
+            </fieldset>
+            <p>volume : {{ volume }}</p>
+    
+    
+          </article> -->
+          
+    <div  id="coder3" class="container-fluid">
         <table align="center">
             <tr>
                 <td>Enter FirtstName:</td>
-                <td><input type="text" id="firstname"></td>
+                <td><input type="text" id="firstname" v-model="firstname" placeholder="enter first name" value=""></td>
+                
+                
             </tr>
+            <tr>
+                <td colspan="2" style="color: red"><span id="validateFirstName"></span></td>
+              </tr>
             <tr>
                     <td>Enter LastName:</td>
-                    <td><input type="text" id="lastname"></td>
+                    <td><input type="text" id="lastname" v-model="lastname" placeholder="enter second name" value=""></td>
+                    
             </tr>
             <tr>
+                <td colspan="2" style="color: red"><span id="validateSecondName"></span></td>
+              </tr>
+            <tr>
                     <td>Enter PhoneNumber:</td>
-                    <td><input type="text" id="phonenumber"></td>
+                    <td><input type="text" id="phonenumber" v-model="phonenumber" placeholder="enter phone number" value=""></td>
+                    
+                    
+            </tr>
+            <tr>
+              <td colspan="2" style="color: red"><span id="validateNumber"></span></td>
             </tr>
             <tr>
                     <td>Enter Email:</td>
-                    <td><input type="text" id="email"></td>
+                    <td><input type="text" id="email" v-model="email"></td>
             </tr>
         </table>
         <div align="center">
-            <button id="contactme">Contact Me</button>
+            <button id="contactme" v-on:click="validate" class="btn btn-primary">Validate Credentials</button>
         </div>
-    </form>
+        <div align="center">
+          <button id="getJokeButton" class="btn btn-primary">Get Joke</button>
+          <p id="result"></p>
+          <p id="countNumber"></p>
+        </div>
+
+      </div>
+      <div align="center">
+        
+      </div>
     <footer class="container-fluid" id="footer2">
             <p align="center">queries -- contact bollenasanthosh@gmail.com</p>
           </footer>
+
+  <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+  <!-- Vue.js must be added before our custom code from https://cdnjs.com/libraries/vue -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+  <script src="JavaScript/Contact.js"></script>
+
 </body>
 </html>
