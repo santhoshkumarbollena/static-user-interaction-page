@@ -4,7 +4,7 @@ QUnit.test('TEST volume', assert => {
   assert.equal(volumefunjs(1, 1, 1), 1, 'Positive integers')
   assert.equal(volumefunjs(-1, -1,2), 2, 'Negative integers')
   assert.equal(volumefunjs(-10, 10,1), -100, 'Mixed')
-  assert.equal(volumefunjs(5, 3,7), 106, 'Default value')
+  assert.equal(volumefunjs(5, 3,7), 105, 'Default value')
   assert.equal(volumefunjs(2, 2,2), 8, 'even numbers')
 })
 // QUnit.test('TEST add', assert => {
